@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project on </title>
+    <link>https://pureloveforyou.github.io/tags/project/</link>
+    <description>Recent content in project on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 24 Oct 2020 02:14:59 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testproject</title>
+      <link>https://pureloveforyou.github.io/post/testproject/</link>
+      <pubDate>Sat, 24 Oct 2020 02:14:59 +0800</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/post/testproject/</guid>
+      <description>敬请期待 </description>
+    </item>
+    
+  </channel>
+</rss>
