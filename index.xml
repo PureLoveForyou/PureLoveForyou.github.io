@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Desmond&#39;s blog</title>
-    <link>http://PureLoveForyou.github.io/</link>
-    <description>Recent content on Desmond&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language><atom:link href="http://PureLoveForyou.github.io/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+    <channel>
+        <title>Desmond</title>
+        <link>https://pureloveforyou.github.io/</link>
+        <description>Recent content on Desmond</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 23 Oct 2020 13:28:05 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Helloworld</title>
+        <link>https://pureloveforyou.github.io/p/helloworld/</link>
+        <pubDate>Fri, 23 Oct 2020 01:23:21 +0800</pubDate>
+        
+        <guid>https://pureloveforyou.github.io/p/helloworld/</guid>
+        <description>&lt;img src="https://pureloveforyou.github.io/wallhaven-kwy2k1.jpg" alt="Featured image of post Helloworld" /&gt;&lt;h1 id=&#34;welcome-to-my-bolg&#34;&gt;Welcome to my bolg&lt;/h1&gt;
+&lt;p&gt;This blog will record some of my thoughts, also some knowledge I have learn. That&amp;rsquo;s all for now. See you later!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;wallhaven-kwy2k1.jpg&#34; alt=&#34;图片 1&#34;  /&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

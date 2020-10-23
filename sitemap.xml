@@ -3,15 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://PureLoveForyou.github.io/categories/</loc>
+    <loc>https://pureloveforyou.github.io/</loc>
+    <lastmod>2020-10-23T13:28:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://PureLoveForyou.github.io/</loc>
+    <loc>https://pureloveforyou.github.io/posts/heybro/</loc>
+    <lastmod>2020-10-23T13:28:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://PureLoveForyou.github.io/tags/</loc>
+    <loc>https://pureloveforyou.github.io/posts/</loc>
+    <lastmod>2020-10-23T13:28:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureloveforyou.github.io/p/helloworld/</loc>
+    <lastmod>2020-10-23T01:23:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureloveforyou.github.io/posts/helloworld/</loc>
+    <lastmod>2020-10-23T01:23:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureloveforyou.github.io/post/</loc>
+    <lastmod>2020-10-23T01:23:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureloveforyou.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pureloveforyou.github.io/tags/</loc>
   </url>
   
 </urlset>
