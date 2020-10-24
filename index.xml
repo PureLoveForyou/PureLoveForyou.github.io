@@ -6,7 +6,25 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 24 Oct 2020 02:17:53 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2020 00:23:50 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links</title>
+      <link>https://pureloveforyou.github.io/post/links/</link>
+      <pubDate>Sun, 25 Oct 2020 00:23:50 +0800</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/post/links/</guid>
+      <description>&lt;h1 id=&#34;links-of-my-friends-website&#34;&gt;Links of my friend&amp;rsquo;s website&lt;/h1&gt;</description>
+    </item>
+    
+    <item>
+      <title>Wonderful idears</title>
+      <link>https://pureloveforyou.github.io/post/wonderful-idears/</link>
+      <pubDate>Sun, 25 Oct 2020 00:10:59 +0800</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/post/wonderful-idears/</guid>
+      <description>&lt;h1 id=&#34;lonely-earth&#34;&gt;Lonely earth&lt;/h1&gt;</description>
+    </item>
+    
     <item>
       <title>Testlife</title>
       <link>https://pureloveforyou.github.io/post/testlife/</link>
@@ -31,7 +49,7 @@
       <pubDate>Fri, 23 Oct 2020 01:23:21 +0800</pubDate>
       
       <guid>https://pureloveforyou.github.io/post/helloworld/</guid>
-      <description>Welcome to my bolg This blog will record some of my thoughts, also some knowledge I have learn. That&amp;rsquo;s all for now. See you later!</description>
+      <description>&lt;h1 id=&#34;welcome-to-my-blog&#34;&gt;Welcome to my blog&lt;/h1&gt;</description>
     </item>
     
   </channel>
