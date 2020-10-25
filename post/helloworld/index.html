@@ -82,6 +82,8 @@
 
 
 
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
 
 
   </head>
@@ -160,6 +162,17 @@
     
     
 
+    
+      <div class="ui segment">
+        <div id="vcomments"></div>
+      </div>
+      <script>
+        new Valine({
+          el: '#vcomments',
+          appId:  null ,
+          appKey:  null 
+        })
+      </script> 
     
 
   </div>
