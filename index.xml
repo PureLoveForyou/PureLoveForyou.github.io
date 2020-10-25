@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
+    <title>Desmond</title>
     <link>https://pureloveforyou.github.io/</link>
-    <description>Recent content on </description>
+    <description>Recent content on Desmond</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Sun, 25 Oct 2020 00:23:50 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Oct 2020 00:03:21 +0000</lastBuildDate><atom:link href="https://pureloveforyou.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Links</title>
-      <link>https://pureloveforyou.github.io/post/links/</link>
-      <pubDate>Sun, 25 Oct 2020 00:23:50 +0800</pubDate>
+      <title>What do you think about earth?</title>
+      <link>https://pureloveforyou.github.io/post/lonelyearth/</link>
+      <pubDate>Sun, 25 Oct 2020 00:03:21 +0000</pubDate>
       
-      <guid>https://pureloveforyou.github.io/post/links/</guid>
-      <description>&lt;h1 id=&#34;links-of-my-friends-website&#34;&gt;Links of my friend&amp;rsquo;s website&lt;/h1&gt;</description>
-    </item>
-    
-    <item>
-      <title>Wonderful idears</title>
-      <link>https://pureloveforyou.github.io/post/wonderful-idears/</link>
-      <pubDate>Sun, 25 Oct 2020 00:10:59 +0800</pubDate>
-      
-      <guid>https://pureloveforyou.github.io/post/wonderful-idears/</guid>
+      <guid>https://pureloveforyou.github.io/post/lonelyearth/</guid>
       <description>&lt;h1 id=&#34;lonely-earth&#34;&gt;Lonely earth&lt;/h1&gt;</description>
     </item>
     
     <item>
-      <title>Testlife</title>
+      <title>Links</title>
+      <link>https://pureloveforyou.github.io/post/links/links/</link>
+      <pubDate>Sun, 25 Oct 2020 00:23:50 +0800</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/post/links/links/</guid>
+      <description>&lt;h1 id=&#34;links-of-my-friends-website&#34;&gt;Links of my friend&amp;rsquo;s website&lt;/h1&gt;</description>
+    </item>
+    
+    <item>
+      <title>TestStories</title>
       <link>https://pureloveforyou.github.io/post/testlife/</link>
       <pubDate>Sat, 24 Oct 2020 02:17:53 +0800</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>Testproject</title>
+      <title>TestAgain</title>
       <link>https://pureloveforyou.github.io/post/testproject/</link>
       <pubDate>Sat, 24 Oct 2020 02:14:59 +0800</pubDate>
       

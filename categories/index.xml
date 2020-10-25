@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on </title>
+    <title>Categories on Desmond</title>
     <link>https://pureloveforyou.github.io/categories/</link>
-    <description>Recent content in Categories on </description>
+    <description>Recent content in Categories on Desmond</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Sun, 25 Oct 2020 00:23:50 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Oct 2020 00:03:21 +0000</lastBuildDate><atom:link href="https://pureloveforyou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fantastic ideas</title>
+      <link>https://pureloveforyou.github.io/categories/fantastic-ideas/</link>
+      <pubDate>Sun, 25 Oct 2020 00:03:21 +0000</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/categories/fantastic-ideas/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>links</title>
       <link>https://pureloveforyou.github.io/categories/links/</link>
@@ -17,11 +26,20 @@
     </item>
     
     <item>
-      <title>life</title>
-      <link>https://pureloveforyou.github.io/categories/life/</link>
+      <title>Stories</title>
+      <link>https://pureloveforyou.github.io/categories/stories/</link>
       <pubDate>Sat, 24 Oct 2020 02:17:53 +0800</pubDate>
       
-      <guid>https://pureloveforyou.github.io/categories/life/</guid>
+      <guid>https://pureloveforyou.github.io/categories/stories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Technical Essay</title>
+      <link>https://pureloveforyou.github.io/categories/technical-essay/</link>
+      <pubDate>Sat, 24 Oct 2020 02:14:59 +0800</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/categories/technical-essay/</guid>
       <description></description>
     </item>
     
