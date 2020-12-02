@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Desmond</title>
+    <title>Categories on 比海还广阔的，是星辰大海</title>
     <link>https://pureloveforyou.github.io/categories/</link>
-    <description>Recent content in Categories on Desmond</description>
+    <description>Recent content in Categories on 比海还广阔的，是星辰大海</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Oct 2020 00:23:50 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 00:10:58 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>科普专栏</title>
+      <link>https://pureloveforyou.github.io/categories/%E7%A7%91%E6%99%AE%E4%B8%93%E6%A0%8F/</link>
+      <pubDate>Wed, 02 Dec 2020 00:10:58 +0800</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/categories/%E7%A7%91%E6%99%AE%E4%B8%93%E6%A0%8F/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>友情链接</title>
       <link>https://pureloveforyou.github.io/categories/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</link>
