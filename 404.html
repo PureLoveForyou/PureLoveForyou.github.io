@@ -15,7 +15,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 <link rel="canonical" href="https://pureloveforyou.github.io/404.html" />
 
@@ -60,7 +60,7 @@
   
   body.default {
     
-    background-color: black;
+    background-color: gray;
     
 
     
@@ -80,13 +80,17 @@
 <nav class="ui secondary inverted menu dream-menu">
 
   <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/pureloveforyou.github.io\/'"></i>
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/pureloveforyou.github.io\/'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
   </div>
   
 </nav>
@@ -104,7 +108,7 @@
         <div class="sub header">Don't worry though, click the button below to wake up.</div>
       </h1>
       <p>
-        <button class="ui inverted button" onclick="window.location.href = '/'">返回首页</button>
+        <button class="ui inverted button" onclick="window.location.href = '/'">Back to home</button>
       </p>
     
   </div>
@@ -122,7 +126,7 @@
   <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
     <article>
       <div class="ui top attached segment">
-        <h3 class="ui header">社交链接</h3>
+        <h3 class="ui header">Social Links</h3>
       </div>
       <div class="ui bottom attached segment">
         <nav class="ui secondary menu dream-menu dream-socials">
@@ -205,6 +209,28 @@
 <script src="/js/theme.js"></script>
 
      
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/pureloveforyou.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
 
     
 

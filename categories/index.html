@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>所有分类 | 比海还广阔的，是星辰大海</title>
+    <title>All Categories | 比海还广阔的，是星辰大海</title>
 
     
 
@@ -15,7 +15,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 <link rel="canonical" href="https://pureloveforyou.github.io/categories/" />
 
@@ -24,7 +24,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pureloveforyou.github.io/categories/" />
-<meta property="og:updated_time" content="2020-12-02T00:10:58+08:00" />
+
 
 
 
@@ -60,7 +60,7 @@
   
   body.default {
     
-    background-color: black;
+    background-color: gray;
     
 
     
@@ -80,13 +80,17 @@
 <nav class="ui secondary inverted menu dream-menu">
 
   <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/pureloveforyou.github.io\/'"></i>
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/pureloveforyou.github.io\/'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
   </div>
   
 </nav>
@@ -109,7 +113,7 @@
     
     <div class="ui medium header">
     
-      星辰 
+      星辰&#39;s blog
       <div class="sub header" style="margin-top: 0.5rem;">比海还广阔的，是星辰大海</div>
     
     </div>
@@ -118,10 +122,10 @@
     <div class="ui horizontal list">
       
       <a class="item" href="/tags">
-        <i class="tags icon" title="所有标签"></i>
+        <i class="tags icon" title="All Tags"></i>
       </a>
       <a class="item" href="/categories">
-        <i class="th list icon" title="所有分类"></i>
+        <i class="th list icon" title="All Categories"></i>
       </a>
     </div>
   </section>
@@ -130,6 +134,10 @@
   <section class="ui attached center aligned segment dream-tags">
     
       <a class="ui label" href="/tags/%E5%8F%8B%E9%93%BE" title="友链">友链</a>
+    
+      <a class="ui label" href="/tags/%E6%95%B0%E5%AD%A6" title="数学">数学</a>
+    
+      <a class="ui label" href="/tags/%E6%96%87%E7%AB%A0" title="文章">文章</a>
     
       <a class="ui label" href="/tags/%E7%A7%91%E6%99%AE" title="科普">科普</a>
     
@@ -151,6 +159,26 @@
         
           <div class="title">
             <i class="dropdown icon"></i>
+            <a href="/categories/maths" class="item">maths</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/post/maths/joseph_ring/" class="item">Joseph_Ring</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
             <a href="/categories/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" class="item">友情链接</a>
           </div>
           <div class="content">
@@ -159,6 +187,46 @@
               <div class="item">
                 <div class="content">
                   <a href="/post/links/links/" class="item">友情链接</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/%E6%96%87%E5%AD%A6" class="item">文学</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/post/literal/%E7%8B%82%E4%BA%BA%E6%97%A5%E8%AE%B0/" class="item">狂人日记</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/%E7%9F%A5%E8%AF%86" class="item">知识</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/post/%E6%9D%82%E8%B0%88/helloworld/" class="item">Helloworld</a>
                 </div>
               </div>
             
@@ -224,7 +292,7 @@
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2020 比海还广阔的，是星辰大海</p>
+      <p>© 2020 - 2021 比海还广阔的，是星辰大海</p>
     
 
     <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
@@ -237,10 +305,10 @@
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column">
     <div class="ui segment dream-categories-section">
       <h1 class="ui large header">
-        所有分类
+        All Categories
         <div class="ui grey sub header">
           
-            2 分类
+            5 categories
           
         </div>
       </h1>
@@ -249,8 +317,21 @@
       
         
         <h2 class="ui medium header">
+          <a href="/categories/maths/">maths</a>
+          1 article
+        </h2>
+        <ul>
+          
+            <li>
+              <a href="https://pureloveforyou.github.io/post/maths/joseph_ring/">Joseph_Ring</a>
+            </li>
+          
+        </ul>
+      
+        
+        <h2 class="ui medium header">
           <a href="/categories/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/">友情链接</a>
-          1篇文章
+          1 article
         </h2>
         <ul>
           
@@ -262,8 +343,34 @@
       
         
         <h2 class="ui medium header">
+          <a href="/categories/%E6%96%87%E5%AD%A6/">文学</a>
+          1 article
+        </h2>
+        <ul>
+          
+            <li>
+              <a href="https://pureloveforyou.github.io/post/literal/%E7%8B%82%E4%BA%BA%E6%97%A5%E8%AE%B0/">狂人日记</a>
+            </li>
+          
+        </ul>
+      
+        
+        <h2 class="ui medium header">
+          <a href="/categories/%E7%9F%A5%E8%AF%86/">知识</a>
+          1 article
+        </h2>
+        <ul>
+          
+            <li>
+              <a href="https://pureloveforyou.github.io/post/%E6%9D%82%E8%B0%88/helloworld/">Helloworld</a>
+            </li>
+          
+        </ul>
+      
+        
+        <h2 class="ui medium header">
           <a href="/categories/%E7%A7%91%E6%99%AE%E4%B8%93%E6%A0%8F/">科普专栏</a>
-          1篇文章
+          1 article
         </h2>
         <ul>
           
@@ -290,7 +397,7 @@
   <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
     <article>
       <div class="ui top attached segment">
-        <h3 class="ui header">社交链接</h3>
+        <h3 class="ui header">Social Links</h3>
       </div>
       <div class="ui bottom attached segment">
         <nav class="ui secondary menu dream-menu dream-socials">
@@ -373,6 +480,28 @@
 <script src="/js/theme.js"></script>
 
      
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/pureloveforyou.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
 
     
 
