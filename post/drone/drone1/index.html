@@ -148,35 +148,36 @@
 <p>用鱼香ROS一键安装，不会有网络问题导致缺失文件</p>
 <h1 id="2px4安装">2、Px4安装</h1>
 <p><a href="https://www.yuque.com/xtdrone/manual_cn/basic_config">语雀教程</a>中下载他打包好的PX4固件（图片中的PX4_Firmware.zip）。</p>
-<p><img src="https://img-blog.csdnimg.cn/8062d1c8f5c742639191b16249ee794c.png" alt="在这里插入图片描述"></p>
+<p><img src="image/drone1/1684001323563.png" alt="1684001323563"></p>
 <p>Make之后缺少Python库，然后缺少pip3，
-<img src="https://img-blog.csdnimg.cn/d6725c68bc4344ada60980e689c6300e.png" alt="在这里插入图片描述"></p>
+<img src="image/drone1/1684001336972.png" alt="1684001336972"></p>
 <p>然后make报错。解决办法：</p>
 <pre><code>sudo apt-get install libgstreamer-plugins-base1.0-dev
-</code></pre><p><img src="https://img-blog.csdnimg.cn/007d0df9a9ca4f6d9ce2f60901a6a4bd.png" alt="在这里插入图片描述"></p>
+</code></pre><p><img src="image/drone1/1684001349704.png" alt="1684001349704"></p>
 <h1 id="3mavros安装">3、mavros安装</h1>
 <p>检查mavros是否安装：
-<img src="https://img-blog.csdnimg.cn/fbdab5d360ec497abc998ec0be02432b.png" alt="在这里插入图片描述"></p>
+<img src="image/drone1/1684001366350.png" alt="1684001366350"></p>
 <p>安装mavros：https://masoudir.github.io/mavros_tutorial/</p>
 <pre><code>sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh 
 chmod a+x install_geographiclib_datasets.sh 
 ./install_geographiclib_datasets.sh
-</code></pre><p><img src="https://img-blog.csdnimg.cn/7ed146e8f18b431fbf38e7eec75a78f9.png" alt="在这里插入图片描述"></p>
-<p>需要root权限：加上sudo执行
-<img src="https://img-blog.csdnimg.cn/1785b046a86848c794fda7a766572048.png" alt="在这里插入图片描述"></p>
+</code></pre><p><img src="image/drone1/1684001379755.png" alt="1684001379755">
+<img src="image/drone1/1684001387378.png" alt="1684001387378"></p>
+<p>需要root权限：加上sudo执行，安装好后：
+<img src="image/drone1/1684001395906.png" alt="1684001395906"></p>
 <h1 id="4测试仿真无人机">4、测试仿真无人机</h1>
 <p>还有gazebo的安装，这里不展开（鱼香ros一键安装如果不是精简版好像是带有gazebo的），安装后进入文件夹，运行：make px4_sitl_default gazebo。然后可以输入<code>commander takeoff</code>或者<code>commander land</code>来测试
-<img src="https://img-blog.csdnimg.cn/0a1c8dfe9ec3416e969d597363239afc.png" alt="在这里插入图片描述"></p>
+<img src="image/drone1/1684001413587.png" alt="1684001413587"></p>
 <p>然后来测试<code>roslaunch px4 mavros_posix_sitl.launch</code>
 发现失败
-<img src="https://img-blog.csdnimg.cn/aae2f25acd044d89a2e9ff4aaa1dd965.png" alt="在这里插入图片描述"></p>
+<img src="image/drone1/1684001421044.png" alt="1684001421044"></p>
 <p>修改 ~/.bashrc，加入以下代码,注意路径匹配，前两个source顺序不能颠倒</p>
 <pre><code>source ~/catkin_ws/devel/setup.bash
 source ~/PX4_Firmware/Tools/setup_gazebo.bash ~/PX4_Firmware/ ~/PX4_Firmware/build/px4_sitl_default
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/PX4_Firmware
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/PX4_Firmware/Tools/sitl_gazebo
-</code></pre><p><img src="https://img-blog.csdnimg.cn/7696fe8f2dd34447977230594b6bbdd7.png" alt="在这里插入图片描述"></p>
+</code></pre><p><img src="image/drone1/1684001429378.png" alt="1684001429378"></p>
 <p>再运行：</p>
 <pre><code>source ~/.bashrc
 </code></pre><p>然后运行如下命令,此时会启动Gazebo,如下图所示。</p>
@@ -184,14 +185,14 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/PX4_Firmware/Tools/sitl_gazebo
 roslaunch px4 mavros_posix_sitl.launch
 </code></pre><p>并运行</p>
 <pre><code>rostopic echo /mavros/state
-</code></pre><p><img src="https://img-blog.csdnimg.cn/be0c1eb53d5d4654b33f3b81c49a78d8.png" alt="在这里插入图片描述"></p>
-<p>若connected: True,则说明MAVROS与SITL通信成功。如果是false，一般是因为.bashrc里的
+</code></pre><p><img src="image/drone1/1684001436861.png" alt="1684001436861">
+若connected: True,则说明MAVROS与SITL通信成功。如果是false，一般是因为.bashrc里的
 路径写的不对，请仔细检查。</p>
 <h1 id="5地面站qgroundcontrol">5、地面站QGroundControl</h1>
 <p>然后需要安装地面站QGroundControl，https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html
-<img src="https://img-blog.csdnimg.cn/50c078a712c54126ad636d01c8dbb8dc.png" alt="在这里插入图片描述"></p>
-<p>运行出问题：
-<img src="https://img-blog.csdnimg.cn/1c39c25f8dcc4212b2c0330783c3fae5.png" alt="在这里插入图片描述"></p>
+<img src="image/drone1/1684001449320.png" alt="1684001449320">
+运行出问题：
+<img src="image/drone1/1684001456125.png" alt="1684001456125"></p>
 <p>解决：https://forum.qt.io/topic/120129/usr-lib-x86_64-linux-gnu-libqt5core-so-5-version-qt_5-15-not-found</p>
 <pre><code>desmond@desmond:~/Downloads$ export LD_LIBRARY_PATH=HERE_PATH_TO_QT_LIBS_DIR &amp;&amp; ./QGroundControl.AppImage 
 </code></pre></article>
