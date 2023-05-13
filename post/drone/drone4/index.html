@@ -177,8 +177,8 @@ conda activate yolo
 <img src="/drone/drone4/1684003994728.png" alt="1684003994728"></p>
 <p>得到图像后还是报错：
 <img src="/drone/drone4/1684004006056.png" alt="1684004006056"></p>
-<p><code>pip list</code>查看当前pytorch版本：
-<img src="/drone/drone4/1684004021576.png" alt="1684004021576"></p>
+<p><code>pip list</code>查看当前pytorch版本：</p>
+<p><img src="/drone/drone4/1684004021576.png" alt="1684004021576"></p>
 <p>解决办法参考：<a href="https://zhuanlan.zhihu.com/p/536044061">AttributeError: &lsquo;Upsample&rsquo; object has no attribute &lsquo;recompute_scale_factor&rsquo;</a></p>
 <p>我是直接更换修改环境代码而不是更改pytorch版本（因为cuda版本比较高，不兼容1.10以下的pytorch）：路径按报错的提示路径打开：<code>/home/desmond/anaconda3/envs/mypytorch/lib/python3.8/site-packages/torch/nn/modules/upsampling.py</code></p>
 <p>找到<code>def forward</code>函数改为：</p>
