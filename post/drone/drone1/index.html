@@ -143,7 +143,7 @@
         </h1>
       </header>
 
-      <article class="main"><p>如果图片缺失，则转去这里：https://blog.csdn.net/m0_54137337/article/details/130664681</p>
+      <article class="main"><p>如果图片缺失，则转去这里：<a href="https://blog.csdn.net/m0_54137337/article/details/130664681">https://blog.csdn.net/m0_54137337/article/details/130664681</a></p>
 <h1 id="1ros安装">1、ROS安装</h1>
 <p>用鱼香ROS一键安装，不会有网络问题导致缺失文件</p>
 <h1 id="2px4安装">2、Px4安装</h1>
@@ -157,7 +157,7 @@
 <h1 id="3mavros安装">3、mavros安装</h1>
 <p>检查mavros是否安装：
 <img src="/drone/1684001366350.png" alt="1684001366350"></p>
-<p>安装mavros：https://masoudir.github.io/mavros_tutorial/</p>
+<p>安装mavros：<a href="https://masoudir.github.io/mavros_tutorial/">https://masoudir.github.io/mavros_tutorial/</a></p>
 <pre><code>sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh 
 chmod a+x install_geographiclib_datasets.sh 
@@ -189,12 +189,12 @@ roslaunch px4 mavros_posix_sitl.launch
 若connected: True,则说明MAVROS与SITL通信成功。如果是false，一般是因为.bashrc里的
 路径写的不对，请仔细检查。</p>
 <h1 id="5地面站qgroundcontrol">5、地面站QGroundControl</h1>
-<p>然后需要安装地面站QGroundControl，https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html
+<p>然后需要<a href="https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html">安装地面站QGroundControl</a>
 <img src="/drone/1684001449320.png" alt="1684001449320">
 运行出问题：
 <img src="/drone/1684001456125.png" alt="1684001456125"></p>
-<p>解决：https://forum.qt.io/topic/120129/usr-lib-x86_64-linux-gnu-libqt5core-so-5-version-qt_5-15-not-found</p>
-<pre><code>desmond@desmond:~/Downloads$ export LD_LIBRARY_PATH=HERE_PATH_TO_QT_LIBS_DIR &amp;&amp; ./QGroundControl.AppImage 
+<p>解决<a href="https://forum.qt.io/topic/120129/usr-lib-x86_64-linux-gnu-libqt5core-so-5-version-qt_5-15-not-found">无法运行地面站</a></p>
+<pre><code>export LD_LIBRARY_PATH=HERE_PATH_TO_QT_LIBS_DIR &amp;&amp; ./QGroundControl.AppImage 
 </code></pre></article>
     </section>
 

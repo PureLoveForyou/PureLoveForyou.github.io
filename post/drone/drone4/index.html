@@ -143,7 +143,7 @@
         </h1>
       </header>
 
-      <article class="main"><p><img src="https://github.com/qq44642754a/Yolov5_ros/blob/master" alt="参考"></p>
+      <article class="main"><p><a href="https://github.com/qq44642754a/Yolov5_ros/blob/master">参考</a></p>
 <h1 id="环境配置">环境配置：</h1>
 <h2 id="1装conda">1、装conda</h2>
 <p>执行：</p>
@@ -164,7 +164,7 @@ conda activate yolo
 <img src="/drone/drone4/1684003717170.png" alt="1684003717170"></p>
 <h2 id="5执行和调试">5、执行和调试</h2>
 <p>此时终端启动虚拟环境后再运行<code>roslaunch offboard_py yolo_v5.launch</code>应该会报错无权限或者<code>import yolov5_ros_msgs.msg error</code>之类的。</p>
-<p>解决办法：<img src="https://blog.csdn.net/zhou2677273778/article/details/126477921" alt="ros中自定义msg消息并在其他功能包中使用"></p>
+<p>解决办法：<a href="https://blog.csdn.net/zhou2677273778/article/details/126477921">ros中自定义msg消息并在其他功能包中使用</a></p>
 <p>在ros工作空间catkin_ws中：
 <code>catkin_create_pkg yolov5_ros_msgs roscpp rospy std_msgs</code>
 把·yolov5_ros/yolov5_ros_msgs里的文件复制到这个新建的包里，然后可以参考前面链接更改msg里的package.xml或者CMakeLists.txt文件。</p>
@@ -179,7 +179,7 @@ conda activate yolo
 <img src="/drone/drone4/1684004006056.png" alt="1684004006056"></p>
 <p><code>pip list</code>查看当前pytorch版本：
 <img src="/drone/drone4/1684004021576.png" alt="1684004021576"></p>
-<p>解决办法参考：<img src="https://zhuanlan.zhihu.com/p/536044061" alt="AttributeError: &lsquo;Upsample&rsquo; object has no attribute &lsquo;recompute_scale_factor&rsquo;"></p>
+<p>解决办法参考：<a href="https://zhuanlan.zhihu.com/p/536044061">AttributeError: &lsquo;Upsample&rsquo; object has no attribute &lsquo;recompute_scale_factor&rsquo;</a></p>
 <p>我是直接更换修改环境代码而不是更改pytorch版本（因为cuda版本比较高，不兼容1.10以下的pytorch）：路径按报错的提示路径打开：<code>/home/desmond/anaconda3/envs/mypytorch/lib/python3.8/site-packages/torch/nn/modules/upsampling.py</code></p>
 <p>找到<code>def forward</code>函数改为：</p>
 <pre><code>def forward(self, input: Tensor) -&gt; Tensor:
