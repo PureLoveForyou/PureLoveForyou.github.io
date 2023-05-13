@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ros | 比海还广阔的，是星辰大海</title>
+    <title>4、ROS使用yolov5 | 比海还广阔的，是星辰大海</title>
 
     
 
@@ -17,19 +17,21 @@
 
 <meta name="generator" content="Hugo 0.87.0" />
 
-<link rel="canonical" href="https://pureloveforyou.github.io/tags/ros/" />
+<link rel="canonical" href="https://pureloveforyou.github.io/post/drone/drone4/" />
 
 
-<meta property="og:title" content="ros" />
+<meta property="og:title" content="4、ROS使用yolov5" />
 <meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://pureloveforyou.github.io/tags/ros/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pureloveforyou.github.io/post/drone/drone4/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-05-01T02:40:26+08:00" />
+<meta property="article:modified_time" content="2023-05-01T02:40:26+08:00" />
 
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ros"/>
+<meta name="twitter:title" content="4、ROS使用yolov5"/>
 <meta name="twitter:description" content=""/>
 
 
@@ -72,7 +74,19 @@
   
 </style>
 
-     
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+
+
   </head>
 
   <body class="default">
@@ -101,7 +115,115 @@
           <div class="dream-max-width">
             
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui top attached segment">
+      <header>
+        <h1 class="ui large header">
+          4、ROS使用yolov5
+          <div class="sub header">
+            @
+            
+              
+                Desmond
+              
+            
+
+            | 
+                Monday, May 1, 2023
+              
+
+            | 1 minute read
+
+            | Update at
+              
+                Monday, May 1, 2023
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><p><img src="https://github.com/qq44642754a/Yolov5_ros/blob/master" alt="参考"></p>
+<h1 id="环境配置">环境配置：</h1>
+<h2 id="1装conda">1、装conda</h2>
+<p>执行：</p>
+<pre><code>bash ~/Downloads/Anaconda3-2021.05-Linux-x86_64.sh
+</code></pre><h2 id="2创建虚拟环境">2、创建虚拟环境</h2>
+<pre><code>conda create -n yolo python=3.8
+conda activate yolo
+</code></pre><h2 id="3装pytorch">3、装pytorch</h2>
+<p>选择对应的版本安装PyTorch: <a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a></p>
+<pre><code>conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
+</code></pre><h2 id="4代码配置">4、代码配置</h2>
+<pre><code>git clone https://github.com/qq44642754a/Yolov5_ros.git
+</code></pre><p>把他的包下载下来后，把yolov5_ros/yolov5_ros下的yolov5文件夹
+<img src="/drone/drone4/1684003654881.png" alt="1684003654881"></p>
+<p>把yolov5_ros/yolov5_ros/scipts/yolo_v5.py复制到自己功能包的scipts里：
+<img src="/drone/drone4/1684003672799.png" alt="1684003672799"></p>
+<p>还有yolov5_ros/yolov5_ros/launch/yolo_v5.launch复制过去。然后根据你的功能包名修改：
+<img src="/drone/drone4/1684003717170.png" alt="1684003717170"></p>
+<h2 id="5执行和调试">5、执行和调试</h2>
+<p>此时终端启动虚拟环境后再运行<code>roslaunch offboard_py yolo_v5.launch</code>应该会报错无权限或者<code>import yolov5_ros_msgs.msg error</code>之类的。</p>
+<p>解决办法：<img src="https://blog.csdn.net/zhou2677273778/article/details/126477921" alt="ros中自定义msg消息并在其他功能包中使用"></p>
+<p>在ros工作空间catkin_ws中：
+<code>catkin_create_pkg yolov5_ros_msgs roscpp rospy std_msgs</code>
+把·yolov5_ros/yolov5_ros_msgs里的文件复制到这个新建的包里，然后可以参考前面链接更改msg里的package.xml或者CMakeLists.txt文件。</p>
+<p>然后catkin build（有的人的包可能是catkin_make）。如下<code>rosmsg show</code>测试出现自定义的<code>yolov5_ros_msgs</code>为成功：
+<img src="/drone/drone4/1684003941374.png" alt="1684003941374"></p>
+<p><code>roslaunch offboard_py yolo_v5.launch</code>提示，说明环境没问题了，只是没有图片输入而以。
+<img src="/drone/drone4/1684003964670.png" alt="1684003964670"></p>
+<h2 id="6读取图像处理">6、读取图像处理</h2>
+<p>将yolo要读取的图像修改为仿真无人机的摄像头话题：
+<img src="/drone/drone4/1684003994728.png" alt="1684003994728"></p>
+<p>得到图像后还是报错：
+<img src="/drone/drone4/1684004006056.png" alt="1684004006056"></p>
+<p><code>pip list</code>查看当前pytorch版本：
+<img src="/drone/drone4/1684004021576.png" alt="1684004021576"></p>
+<p>解决办法参考：<img src="https://zhuanlan.zhihu.com/p/536044061" alt="AttributeError: &lsquo;Upsample&rsquo; object has no attribute &lsquo;recompute_scale_factor&rsquo;"></p>
+<p>我是直接更换修改环境代码而不是更改pytorch版本（因为cuda版本比较高，不兼容1.10以下的pytorch）：路径按报错的提示路径打开：<code>/home/desmond/anaconda3/envs/mypytorch/lib/python3.8/site-packages/torch/nn/modules/upsampling.py</code></p>
+<p>找到<code>def forward</code>函数改为：</p>
+<pre><code>def forward(self, input: Tensor) -&gt; Tensor:
+    return F.interpolate(input, self.size, self.scale_factor, self.mode, self.align_corners)
+    # return F.interpolate(input, self.size, self.scale_factor, self.mode, self.align_corners,
+    # recompute_scale_factor=self.recompute_scale_factor)
+</code></pre></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+        
+          <a class="ui label" href="/tags/ros" title="ros">ros</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+    
+    
+
+    
+      <div class="ui segment">
+        <div id="vcomments"></div>
+      </div>
+      <script>
+        new Valine({
+          el: '#vcomments',
+          appId: "IqmoRf46DAo3GPqxmbN0VGgK-gzGzoHsz",
+          appKey: "hGpqWukmDdNSGfMK2zcTavf8"
+        })
+      </script> 
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -111,12 +233,12 @@
     </div>
 
     
-    <div class="ui medium header">
+    <h1 class="ui medium header">
     
       星辰&#39;s blog
       <div class="sub header" style="margin-top: 0.5rem;">比海还广阔的，是星辰大海</div>
     
-    </div>
+    </h1>
     
 
     <div class="ui horizontal list">
@@ -342,184 +464,6 @@
 </article>
 
   </div>
-
-  
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://pureloveforyou.github.io/post/drone/drone4/">
-    
-      <img src="/drone/drone.jpg" alt="4、ROS使用yolov5" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="/post/drone/drone4/">4、ROS使用yolov5</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Monday, May 1, 2023
-        
-      </p>
-      <p class="author">
-        @
-        
-          
-            Desmond
-          
-        
-      </p>
-    </div>
-    <div class="description">
-      
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a class="reading-time">
-      <i class="clock icon"></i>
-      1 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://pureloveforyou.github.io/post/drone/drone3/">
-    
-      <img src="/drone/drone.jpg" alt="3、添加摄像头后，ROS opencv订阅图像" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="/post/drone/drone3/">3、添加摄像头后，ROS opencv订阅图像</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Friday, Apr 14, 2023
-        
-      </p>
-      <p class="author">
-        @
-        
-          
-            Desmond
-          
-        
-      </p>
-    </div>
-    <div class="description">
-      
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a class="reading-time">
-      <i class="clock icon"></i>
-      1 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://pureloveforyou.github.io/post/drone/drone2/">
-    
-      <img src="/drone/drone.jpg" alt="2、gazebo仿真添加摄像头" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="/post/drone/drone2/">2、gazebo仿真添加摄像头</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Tuesday, Mar 14, 2023
-        
-      </p>
-      <p class="author">
-        @
-        
-          
-            Desmond
-          
-        
-      </p>
-    </div>
-    <div class="description">
-      
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a class="reading-time">
-      <i class="clock icon"></i>
-      1 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://pureloveforyou.github.io/post/drone/drone1/">
-    
-      <img src="/drone/drone.jpg" alt="1、无人机跟踪系统：ROS、PX4、mavros安装" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="/post/drone/drone1/">1、无人机跟踪系统：ROS、PX4、mavros安装</a>
-    </h2>
-    <div class="meta">
-      <p class="date">
-        
-          Tuesday, Feb 14, 2023
-        
-      </p>
-      <p class="author">
-        @
-        
-          
-            Desmond
-          
-        
-      </p>
-    </div>
-    <div class="description">
-      
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a class="reading-time">
-      <i class="clock icon"></i>
-      1 minute read
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-
-  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-    
-
-
-
-  </div>
 </div>
 
           </div>
@@ -617,9 +561,31 @@
 <script src="/js/theme.js"></script>
 
     
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/masonry.pkgd.min.js"></script>
-<script src="/js/grid.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+<script src="/js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme =  null 
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
 
 
     
