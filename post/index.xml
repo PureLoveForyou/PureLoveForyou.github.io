@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 比海还广阔的，是星辰大海</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Feb 2023 00:32:21 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Apr 2023 02:27:47 +0800</lastBuildDate><atom:link href="https://pureloveforyou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>添加摄像头后，ROS opencv订阅图像</title>
+      <link>https://pureloveforyou.github.io/post/drone/drone3/</link>
+      <pubDate>Fri, 14 Apr 2023 02:27:47 +0800</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/post/drone/drone3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gazebo仿真添加摄像头</title>
+      <link>https://pureloveforyou.github.io/post/drone/drone2/</link>
+      <pubDate>Tue, 14 Mar 2023 02:19:23 +0800</pubDate>
+      
+      <guid>https://pureloveforyou.github.io/post/drone/drone2/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>无人机跟踪系统：ROS、PX4、mavros安装</title>
       <link>https://pureloveforyou.github.io/post/drone/drone1/</link>
